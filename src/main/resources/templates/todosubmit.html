@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>IdeeSubmit</title>
+</head>
+<body>
+<h1>Es wurde deiner Todo-Liste zugefügt.</h1>
+
+<p th:text ="${todo.inhalt}"> </p>
+
+<a href="/todo">Noch ein Todo eintragen</a>
+
+<a href="/">Liste anzeigen</a>
+
+</body>
+</html>

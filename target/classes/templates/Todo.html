@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Hier kannst du dein nächstes Todo eintragen:
+
+<form method="POST" action="/todosubmit" th:object="${todo}">
+
+    <label for="todo">Todo eintragen:</label>
+    <input type="text" id="todo" th:field="*{inhalt}"/>
+    <input type="submit" value="Submit"/>
+
+</form>
+</body>
+</html>

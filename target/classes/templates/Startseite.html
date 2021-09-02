@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoListe</title>
+</head>
+<body>
+<h1>Das ist die TodoListe:</h1>
+
+<table>
+    <tr>
+        <th>Todo</th>
+        <th>erledigt</th>
+    </tr>
+    <tr th:each =" todo:${todoliste}">
+        <td th:text="${todo.inhalt}" inputmode="checkbox"></td>
+        <td><form method="POST" action="/todochange" th:object="${todo}">
+            <input type="submit" value="itsDone"/>
+
+        </form></td>
+        <td th:text="${#bools.isTrue(done)}"></td>
+    </tr>
+</table>
+<a href="/todo">Noch ein Todo eintragen</a>
+</body>
+</html>
